@@ -150,8 +150,8 @@ public class VentanaClientes extends JFrame {
 		JButton exportButton = new JButton();
 		ImageIcon exporticon = new ImageIcon("C:/Users/Alberto/Desktop/exporticon.png");
 		exportButton.setBorderPainted(false); // Elimina el borde para que parezca un icono
-		exportButton.setContentAreaFilled(false); // Elimina el relleno
-		exportButton.setFocusPainted(false); // Elimina el foco al hacer clic
+		exportButton.setContentAreaFilled(false); 
+		exportButton.setFocusPainted(false); 
 		exportButton.setIcon(exporticon);
 		//exportButton.setPreferredSize(new Dimension(100, 30));
 		exportButton.setPreferredSize(new Dimension(exporticon.getIconWidth(), exporticon.getIconHeight()));

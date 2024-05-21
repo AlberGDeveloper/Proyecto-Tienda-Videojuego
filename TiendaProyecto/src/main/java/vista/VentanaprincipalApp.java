@@ -69,8 +69,8 @@ public class VentanaprincipalApp extends JFrame {
         //btnStock.setPreferredSize(new Dimension(100, 100));
         btnClientes.setIcon(clientesIcon);
         btnClientes.setBorderPainted(false); // Elimina el borde para que parezca un icono
-        btnClientes.setContentAreaFilled(false); // Elimina el relleno
-        btnClientes.setFocusPainted(false); // Elimina el foco al hacer clic
+        btnClientes.setContentAreaFilled(false); // Elimina el relleno del botón
+        btnClientes.setFocusPainted(false); // Elimina el "focus" al hacer clic
         gbc.gridx = 1; // Columna 1
         gbc.gridy = 0; // Fila 0
         gbc.insets = new Insets(129, 10, 10, 5);

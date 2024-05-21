@@ -62,21 +62,21 @@ public class Controlador {
 
 
 	public void mostrarVistaprincipal() { // Código para cambiar a la vista
-		VentanaprincipalApp // Puedes instanciar la vista y mostrarla VistageneralApp
+		VentanaprincipalApp 
 		vistaGeneralApp = new VentanaprincipalApp();
 		vistaGeneralApp.setVisible(true);
 
 	}
 
 	public void mostrarVentanaStock() { // Código para cambiar a la vista
-		VentanaStock // Puedes instanciar la vista y mostrarla VistageneralApp
+		VentanaStock 
 		vistaStockApp = new VentanaStock();
 		vistaStockApp.setVisible(true);
 		// ventanaPrincipal.setVisible(false);
 	}
 	
 	public void mostrarVentanaClientes() { // Código para cambiar a la vista
-		VentanaClientes // Puedes instanciar la vista y mostrarla VistageneralApp
+		VentanaClientes 
 		vistaClientesApp = new VentanaClientes();
 		vistaClientesApp.setVisible(true);
 		// ventanaPrincipal.setVisible(false);
