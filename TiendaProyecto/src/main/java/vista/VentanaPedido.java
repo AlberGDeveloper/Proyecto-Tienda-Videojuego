@@ -37,7 +37,7 @@ public class VentanaPedido extends JFrame {
         VentanaprincipalApp ventanaPrincipal = null;
         VentanaClientes ventanaClientes = null;
         VentanaStock ventanaStock = null;
-        controlador = new Controlador(insertjuegos, loginview, compruebaacceso, conexion, ventanaPrincipal, ventanaStock, ventanaClientes, this, modeloExport, modeloExport2, modeloExport3);
+        //controlador = new Controlador(insertjuegos, loginview, compruebaacceso, conexion, ventanaPrincipal, ventanaStock, ventanaClientes, this, modeloExport, modeloExport2, modeloExport3);
 
         // Configuración de la ventana y otros componentes
         setTitle("Pedidos");

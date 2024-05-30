@@ -34,10 +34,12 @@ public class Controlador {
 	public Controlador() {
 
 		super();
+		
 	}
 
 	public Controlador(InsertJuegos insertjuegos, LoginView loginview, CompruebaAcceso compruebaacceso,
-			Conexion conexion, VentanaprincipalApp ventanaPrincipal, VentanaStock ventanaStock, VentanaClientes ventanaClientes, VentanaPedido ventanaPedido, Exportxls modeloExport, ExportClientes modeloExport2, ExportPedidos modeloExport3) {
+			Conexion conexion, VentanaprincipalApp ventanaPrincipal, VentanaStock ventanaStock, VentanaClientes ventanaClientes, 
+								VentanaPedido ventanaPedido, Exportxls modeloExport, ExportClientes modeloExport2, ExportPedidos modeloExport3) {
 		super();
 		this.insertjuegos = insertjuegos;
 		this.loginview = loginview;
@@ -52,6 +54,7 @@ public class Controlador {
 		this.modeloExport3 = modeloExport3;
 
 	}
+	
 /*
  * 
  * 	public void mostrarInsertjuegos() {
