@@ -15,7 +15,7 @@ public class CompruebaAcceso {
 		Controlador controlador = new Controlador();
 		String username = loginView.getUsernameField();
 		char[] password = loginView.getPasswordFieldValue();
-		System.out.println("Sout desde conexion " + username + " " + new String(password));
+		//System.out.println("Sout desde conexion " + username + " " + new String(password));
 
 		if (verificarCredenciales(connection, username, password)) {
 			System.out.println("Credenciales correctas. Accediendo a la siguiente vista...");

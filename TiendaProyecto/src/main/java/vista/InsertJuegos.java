@@ -28,11 +28,11 @@ public class InsertJuegos extends JFrame {
         // Establecer el tamaño preferido del panel (por ejemplo, 800x600)
         panelComponentes.setPreferredSize(new Dimension(800, 600));
 
-        // Cambiar el layout del panel a GridBagLayout
+        // Cambio del layout del panel a GridBagLayout
         panelComponentes.setLayout(new GridBagLayout());
         panelComponentes.setOpaque(false);
 
-        // Configuración para el fondo (Ajusta la ruta y el tamaño según necesites)
+        // Configuración para el fondo
         setContentPane(new JPanel() {
             @Override
             protected void paintComponent(Graphics g) {
