@@ -15,26 +15,29 @@ import controlador.Controlador;
 import modelo.CompruebaAcceso;
 import modelo.Conexion;
 import modelo.ExportClientes;
+import modelo.ExportPedidos;
 import modelo.Exportxls;  
 
-public class VentanaPedidos extends JFrame {
+public class VentanaPedido extends JFrame {
     private BufferedImage backgroundImage;
     private DefaultTableModel tableModel;
     private JTable table;
     private JPanel tablePanel;
     private Controlador controlador;
     private Exportxls modeloExport;
-    private ExportPedidos modeloExport2;
+    private ExportClientes modeloExport2;
+    private ExportPedidos modeloExport3;
 
     public VentanaPedido() {
         InsertJuegos insertjuegos = null;
         LoginView loginview = null;
         CompruebaAcceso compruebaacceso = null;
         Conexion conexion = null;
+        modeloExport3 = new ExportPedidos(); 
         VentanaprincipalApp ventanaPrincipal = null;
-        VentanaStock ventanastock = null;
-        modeloExport2 = new ExportPedidos(); 
-        controlador = new Controlador(insertjuegos, loginview, compruebaacceso, conexion, ventanaPrincipal, ventanastock, this, modeloExport, modeloExport2);
+        VentanaClientes ventanaClientes = null;
+        VentanaStock ventanaStock = null;
+        controlador = new Controlador(insertjuegos, loginview, compruebaacceso, conexion, ventanaPrincipal, ventanaStock, ventanaClientes, this, modeloExport, modeloExport2, modeloExport3);
 
         // Configuración de la ventana y otros componentes
         setTitle("Pedidos");
@@ -109,7 +112,7 @@ public class VentanaPedidos extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 // Cierra la ventana actual y abre la ventana para insertar pedidos
                 dispose();
-                InsertPedidos insertPedidos = new InsertClientes();
+                InsertPedidos insertPedidos = new InsertPedidos();
                 insertPedidos.setVisible(true);
             }
         });
@@ -199,7 +202,6 @@ public class VentanaPedidos extends JFrame {
                 }
                 tableModel.addRow(row);
             }
-cliente
         } catch (SQLException e) {
             e.printStackTrace();
             JOptionPane.showMessageDialog(this, "Error al cargar los datos de los pedidos: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);

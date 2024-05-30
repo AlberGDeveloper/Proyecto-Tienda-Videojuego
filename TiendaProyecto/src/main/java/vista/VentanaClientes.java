@@ -15,6 +15,7 @@ import controlador.Controlador;
 import modelo.CompruebaAcceso;
 import modelo.Conexion;
 import modelo.ExportClientes;
+import modelo.ExportPedidos;
 import modelo.Exportxls;
 
 public class VentanaClientes extends JFrame {
@@ -25,6 +26,8 @@ public class VentanaClientes extends JFrame {
     private Controlador controlador;
     private Exportxls modeloExport;
     private ExportClientes modeloExport2;
+    private ExportPedidos modeloExport3;
+
 
     public VentanaClientes() {
         InsertJuegos insertjuegos = null;
@@ -33,8 +36,9 @@ public class VentanaClientes extends JFrame {
         Conexion conexion = null;
         VentanaprincipalApp ventanaPrincipal = null;
         VentanaStock ventanastock = null;
+        VentanaPedido ventanaPedido = null;
         modeloExport2 = new ExportClientes(); 
-        controlador = new Controlador(insertjuegos, loginview, compruebaacceso, conexion, ventanaPrincipal, ventanastock, this, modeloExport, modeloExport2);
+        controlador = new Controlador(insertjuegos, loginview, compruebaacceso, conexion, ventanaPrincipal, ventanastock, this, ventanaPedido, modeloExport, modeloExport2, modeloExport3);
 
         // Configuración de la ventana y otros componentes
         setTitle("Clientes");

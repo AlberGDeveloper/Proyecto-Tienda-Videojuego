@@ -20,6 +20,7 @@ import javax.imageio.ImageIO;
 import modelo.CompruebaAcceso;
 import modelo.Conexion;
 import modelo.ExportClientes;
+import modelo.ExportPedidos;
 import modelo.Exportxls;
 import controlador.Controlador;
 
@@ -32,6 +33,7 @@ public class VentanaStock extends JFrame {
     private Controlador controlador;
     private Exportxls modeloExport;
     private ExportClientes modeloExport2;
+    private ExportPedidos modeloExport3;
 
     public VentanaStock() {
         InsertJuegos insertjuegos = null;
@@ -40,8 +42,9 @@ public class VentanaStock extends JFrame {
         Conexion conexion = null;
         VentanaprincipalApp ventanaPrincipal = null;
         VentanaClientes ventanaclientes = null;
+        VentanaPedido ventanaPedido = null;
         modeloExport = new Exportxls(); 
-        controlador = new Controlador(insertjuegos, loginview, compruebaacceso, conexion, ventanaPrincipal, this, ventanaclientes, modeloExport, modeloExport2);
+        controlador = new Controlador(insertjuegos, loginview, compruebaacceso, conexion, ventanaPrincipal, this, ventanaclientes, ventanaPedido, modeloExport, modeloExport2, modeloExport3);
 
         // Configuración de la ventana y otros componentes
         setTitle("Stock de Videojuegos");
