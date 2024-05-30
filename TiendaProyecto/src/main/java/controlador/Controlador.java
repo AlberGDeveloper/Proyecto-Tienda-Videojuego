@@ -28,7 +28,7 @@ public class Controlador {
 	private Exportxls modeloExport;
 	private ExportClientes modeloExport2;
 	private ExportPedidos modeloExport3;
-	private VentanaPedido ventanaPedido;
+	private VentanaPedido ventanaPedidos;
 	private VentanaClientes ventanaClientes;
 
 	public Controlador() {
@@ -46,7 +46,7 @@ public class Controlador {
 		this.ventanaPrincipal = ventanaPrincipal;
 		this.ventanaStock = ventanaStock;
 		this.ventanaClientes = ventanaClientes;
-		this.ventanaPedido = ventanaPedido;
+		this.ventanaPedidos = ventanaPedido;
 		this.modeloExport = modeloExport;
 		this.modeloExport2 = modeloExport2;
 		this.modeloExport3 = modeloExport3;
@@ -86,6 +86,13 @@ public class Controlador {
 		vistaClientesApp.setVisible(true);
 		// ventanaPrincipal.setVisible(false);
 	}
+	
+	public void mostrarVentanaPedidos() { // Código para cambiar a la vista
+		VentanaPedido
+		vistaPedidoApp = new VentanaPedido();
+		vistaPedidoApp.setVisible(true);
+		// ventanaPrincipal.setVisible(false);
+	}
 
 	public void goToExport() {
 		TableModel model = ventanaStock.obtenerTableModel();
@@ -95,5 +102,10 @@ public class Controlador {
 	public void goToExport2() {
 		TableModel model2 = ventanaClientes.obtenerTableModel();
 		modeloExport2.exportarAExcel(model2);
+	}
+	
+	public void goToExport3() {
+		TableModel model3 = ventanaPedidos.obtenerTableModel();
+		modeloExport3.exportarAExcel(model3);
 	}
 }
