@@ -10,7 +10,7 @@ public class ExportClientes {
 
 	public void exportarAExcel(TableModel tableModel) {
 		Workbook workbook = new XSSFWorkbook();
-		Sheet sheet = workbook.createSheet("Datos Exportados");
+		Sheet sheet = workbook.createSheet("Datos de clientes exportados");
 
 		// Crear la fila de encabezado
 		Row headerRow = sheet.createRow(0);

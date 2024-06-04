@@ -28,19 +28,11 @@ public class InsertJuegos extends JFrame {
         // Establecer el tamaño preferido del panel (por ejemplo, 800x600)
         panelComponentes.setPreferredSize(new Dimension(800, 600));
 
-        // Cambiar el layout del panel a GridBagLayout
+        // Cambio del layout del panel a GridBagLayout
         panelComponentes.setLayout(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = GridBagConstraints.RELATIVE;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.insets = new Insets(5, 5, 5, 5); // Espacio entre componentes
         panelComponentes.setOpaque(false);
 
-        // Agregar componentes al panel
-        agregarComponentes(panelComponentes, gbc);
-
-        // Configuración para el fondo (Ajusta la ruta y el tamaño según necesites)
+        // Configuración para el fondo
         setContentPane(new JPanel() {
             @Override
             protected void paintComponent(Graphics g) {
@@ -56,46 +48,111 @@ public class InsertJuegos extends JFrame {
 
         // Agregar el panel al GridBagLayout principal
         getContentPane().add(panelComponentes);
+
+        // Agregar componentes al panel
+        agregarComponentes(panelComponentes);
     }
 
-    private void agregarComponentes(JPanel panel, GridBagConstraints gbc) {
+    private void agregarComponentes(JPanel panel) {
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.insets = new Insets(5, 5, 5, 5); // Espacio entre componentes
+
         // Campos y etiquetas
         JLabel idLabel = new JLabel("Id:");
         idField = new JTextField(20);
         idField.setPreferredSize(new Dimension(400, 20)); // Establecer 4 cm de ancho y 1 cm de alto
         idField.setOpaque(false); // Hacer el campo de texto transparente
 
+        GridBagConstraints gbcIdLabel = new GridBagConstraints();
+        gbcIdLabel.gridx = 0;
+        gbcIdLabel.gridy = 0;
+        gbcIdLabel.insets = new Insets(5, 5, 5, 5);
+        gbcIdLabel.anchor = GridBagConstraints.WEST;
+        panel.add(idLabel, gbcIdLabel);
+
+        GridBagConstraints gbcIdField = new GridBagConstraints();
+        gbcIdField.gridx = 1;
+        gbcIdField.gridy = 0;
+        gbcIdField.insets = new Insets(5, 5, 5, 5);
+        gbcIdField.fill = GridBagConstraints.HORIZONTAL;
+        panel.add(idField, gbcIdField);
+
         JLabel plataformaLabel = new JLabel("Plataforma:");
         plataformaField = new JTextField(20);
         plataformaField.setPreferredSize(new Dimension(400, 20));
         plataformaField.setOpaque(false);
 
-        JLabel precioLabel = new JLabel("Precio:");
+        GridBagConstraints gbcPlataformaLabel = new GridBagConstraints();
+        gbcPlataformaLabel.gridx = 0;
+        gbcPlataformaLabel.gridy = 1;
+        gbcPlataformaLabel.insets = new Insets(5, 5, 5, 5);
+        gbcPlataformaLabel.anchor = GridBagConstraints.WEST;
+        panel.add(plataformaLabel, gbcPlataformaLabel);
+
+        GridBagConstraints gbcPlataformaField = new GridBagConstraints();
+        gbcPlataformaField.gridx = 1;
+        gbcPlataformaField.gridy = 1;
+        gbcPlataformaField.insets = new Insets(5, 5, 5, 5);
+        gbcPlataformaField.fill = GridBagConstraints.HORIZONTAL;
+        panel.add(plataformaField, gbcPlataformaField);
+
+        JLabel precioLabel = new JLabel("Precio en €:");
         precioField = new JTextField(10);
         precioField.setPreferredSize(new Dimension(400, 20));
         precioField.setOpaque(false);
+
+        GridBagConstraints gbcPrecioLabel = new GridBagConstraints();
+        gbcPrecioLabel.gridx = 0;
+        gbcPrecioLabel.gridy = 2;
+        gbcPrecioLabel.insets = new Insets(5, 5, 5, 5);
+        gbcPrecioLabel.anchor = GridBagConstraints.WEST;
+        panel.add(precioLabel, gbcPrecioLabel);
+
+        GridBagConstraints gbcPrecioField = new GridBagConstraints();
+        gbcPrecioField.gridx = 1;
+        gbcPrecioField.gridy = 2;
+        gbcPrecioField.insets = new Insets(5, 5, 5, 5);
+        gbcPrecioField.fill = GridBagConstraints.HORIZONTAL;
+        panel.add(precioField, gbcPrecioField);
 
         JLabel unidadesLabel = new JLabel("Stock:");
         unidadesField = new JTextField(10);
         unidadesField.setPreferredSize(new Dimension(400, 20));
         unidadesField.setOpaque(false);
 
+        GridBagConstraints gbcUnidadesLabel = new GridBagConstraints();
+        gbcUnidadesLabel.gridx = 0;
+        gbcUnidadesLabel.gridy = 3;
+        gbcUnidadesLabel.insets = new Insets(5, 5, 5, 5);
+        gbcUnidadesLabel.anchor = GridBagConstraints.WEST;
+        panel.add(unidadesLabel, gbcUnidadesLabel);
+
+        GridBagConstraints gbcUnidadesField = new GridBagConstraints();
+        gbcUnidadesField.gridx = 1;
+        gbcUnidadesField.gridy = 3;
+        gbcUnidadesField.insets = new Insets(5, 5, 5, 5);
+        gbcUnidadesField.fill = GridBagConstraints.HORIZONTAL;
+        panel.add(unidadesField, gbcUnidadesField);
+
         JLabel nombreLabel = new JLabel("Título:");
         nombreField = new JTextField(20);
         nombreField.setPreferredSize(new Dimension(400, 20));
         nombreField.setOpaque(false);
 
-        // Agregar componentes al panel
-        panel.add(idLabel, gbc);
-        panel.add(idField, gbc);
-        panel.add(plataformaLabel, gbc);
-        panel.add(plataformaField, gbc);
-        panel.add(precioLabel, gbc);
-        panel.add(precioField, gbc);
-        panel.add(unidadesLabel, gbc);
-        panel.add(unidadesField, gbc);
-        panel.add(nombreLabel, gbc);
-        panel.add(nombreField, gbc);
+        GridBagConstraints gbcNombreLabel = new GridBagConstraints();
+        gbcNombreLabel.gridx = 0;
+        gbcNombreLabel.gridy = 4;
+        gbcNombreLabel.insets = new Insets(5, 5, 5, 5);
+        gbcNombreLabel.anchor = GridBagConstraints.WEST;
+        panel.add(nombreLabel, gbcNombreLabel);
+
+        GridBagConstraints gbcNombreField = new GridBagConstraints();
+        gbcNombreField.gridx = 1;
+        gbcNombreField.gridy = 4;
+        gbcNombreField.insets = new Insets(5, 5, 5, 5);
+        gbcNombreField.fill = GridBagConstraints.HORIZONTAL;
+        panel.add(nombreField, gbcNombreField);
 
         // Botón para añadir el videojuego
         JButton addButton = new JButton("Añadir videojuego");
@@ -105,12 +162,26 @@ public class InsertJuegos extends JFrame {
                 aniadirVideojuego();
             }
         });
-        panel.add(addButton, gbc);
+
+        GridBagConstraints gbcAddButton = new GridBagConstraints();
+        gbcAddButton.gridx = 0;
+        gbcAddButton.gridy = 5;
+        gbcAddButton.gridwidth = 2;
+        gbcAddButton.insets = new Insets(5, 5, 5, 5);
+        gbcAddButton.anchor = GridBagConstraints.CENTER;
+        panel.add(addButton, gbcAddButton);
 
         // Botón para volver
         JButton backButton = new JButton("Volver a Stock");
         backButton.addActionListener(e -> volverAVentanaStock());
-        panel.add(backButton, gbc);
+
+        GridBagConstraints gbcBackButton = new GridBagConstraints();
+        gbcBackButton.gridx = 0;
+        gbcBackButton.gridy = 6;
+        gbcBackButton.gridwidth = 2;
+        gbcBackButton.insets = new Insets(5, 5, 5, 5);
+        gbcBackButton.anchor = GridBagConstraints.CENTER;
+        panel.add(backButton, gbcBackButton);
     }
 
     private void aniadirVideojuego() {
@@ -146,4 +217,12 @@ public class InsertJuegos extends JFrame {
         VentanaStock ventanaStock = new VentanaStock();
         ventanaStock.setVisible(true); // Muestra la ventana de stock
     }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            InsertJuegos frame = new InsertJuegos();
+            frame.setVisible(true);
+        });
+    }
 }
+

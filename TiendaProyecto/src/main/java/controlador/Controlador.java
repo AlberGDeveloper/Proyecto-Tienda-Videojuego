@@ -7,10 +7,12 @@ import javax.swing.SwingUtilities;
 import modelo.CompruebaAcceso;
 import modelo.Conexion;
 import modelo.ExportClientes;
+import modelo.ExportPedidos;
 import modelo.Exportxls;
 import vista.InsertJuegos;
 import vista.LoginView;
 import vista.VentanaClientes;
+import vista.VentanaPedido;
 import vista.VentanaStock;
 import vista.VentanaprincipalApp;
 import javax.swing.table.TableModel;
@@ -25,18 +27,19 @@ public class Controlador {
 	private VentanaStock ventanaStock;
 	private Exportxls modeloExport;
 	private ExportClientes modeloExport2;
-
+	private ExportPedidos modeloExport3;
+	private VentanaPedido ventanaPedidos;
 	private VentanaClientes ventanaClientes;
 
 	private VentanaPedido VentanaPedido;
 
 	public Controlador() {
 
-		super();
 	}
 
 	public Controlador(InsertJuegos insertjuegos, LoginView loginview, CompruebaAcceso compruebaacceso,
-			Conexion conexion, VentanaprincipalApp ventanaPrincipal, VentanaStock ventanaStock, VentanaClientes ventanaClientes, Exportxls modeloExport, ExportClientes modeloExport2) {
+			Conexion conexion, VentanaprincipalApp ventanaPrincipal, VentanaStock ventanaStock, VentanaClientes ventanaClientes, 
+								VentanaPedido ventanaPedido, Exportxls modeloExport, ExportClientes modeloExport2, ExportPedidos modeloExport3) {
 		super();
 		this.insertjuegos = insertjuegos;
 		this.loginview = loginview;
@@ -45,10 +48,13 @@ public class Controlador {
 		this.ventanaPrincipal = ventanaPrincipal;
 		this.ventanaStock = ventanaStock;
 		this.ventanaClientes = ventanaClientes;
+		this.ventanaPedidos = ventanaPedido;
 		this.modeloExport = modeloExport;
 		this.modeloExport2 = modeloExport2;
+		this.modeloExport3 = modeloExport3;
 
 	}
+	
 /*
  * 
  * 	public void mostrarInsertjuegos() {
@@ -83,6 +89,13 @@ public class Controlador {
 		vistaClientesApp.setVisible(true);
 		// ventanaPrincipal.setVisible(false);
 	}
+	
+	public void mostrarVentanaPedidos() { // Código para cambiar a la vista
+		VentanaPedido
+		vistaPedidoApp = new VentanaPedido();
+		vistaPedidoApp.setVisible(true);
+		// ventanaPrincipal.setVisible(false);
+	}
 
 	public void goToExport() {
 		TableModel model = ventanaStock.obtenerTableModel();
@@ -92,5 +105,10 @@ public class Controlador {
 	public void goToExport2() {
 		TableModel model2 = ventanaClientes.obtenerTableModel();
 		modeloExport2.exportarAExcel(model2);
+	}
+	
+	public void goToExport3() {
+		TableModel model3 = ventanaPedidos.obtenerTableModel();
+		modeloExport3.exportarAExcel(model3);
 	}
 }

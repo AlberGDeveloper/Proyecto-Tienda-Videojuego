@@ -114,10 +114,10 @@ public class VentanaprincipalApp extends JFrame {
         }
     }
 
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             VentanaprincipalApp frame = new VentanaprincipalApp();
             frame.setVisible(true);
         });
-    }
+    }*/
 }
