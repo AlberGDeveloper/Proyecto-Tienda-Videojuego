@@ -17,7 +17,7 @@ import modelo.Conexion;
 import modelo.ExportClientes;
 import modelo.Exportxls;  
 
-public class VentanaPedidos extends JFrame {
+public class VentanaPedido extends JFrame {
     private BufferedImage backgroundImage;
     private DefaultTableModel tableModel;
     private JTable table;

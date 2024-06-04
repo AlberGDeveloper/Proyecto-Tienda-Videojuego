@@ -28,6 +28,8 @@ public class Controlador {
 
 	private VentanaClientes ventanaClientes;
 
+	private VentanaPedido VentanaPedido;
+
 	public Controlador() {
 
 		super();

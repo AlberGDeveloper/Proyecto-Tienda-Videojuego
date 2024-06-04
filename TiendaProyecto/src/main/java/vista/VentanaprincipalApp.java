@@ -69,6 +69,27 @@ public class VentanaprincipalApp extends JFrame {
                 controlador.mostrarVentanaClientes();
             }
         });
+
+                // Botón Pedido con icono
+                JButton btnPedido = new JButton();
+                ImageIcon pedidoIcon = new ImageIcon(getClass().getResource("/images/icon_2.png"));
+                btnClientes.setIcon(pedidoIcon);
+                btnClientes.setBorderPainted(false); // Elimina el borde para que parezca un icono
+                btnClientes.setContentAreaFilled(false); // Elimina el relleno del botón
+                btnClientes.setFocusPainted(false); // Elimina el "focus" al hacer clic
+                gbc.gridx = 1; // Columna 1
+                gbc.gridy = 0; // Fila 0
+                gbc.insets = new Insets(125, 10, 10, 5);
+                contentPane.add(btnPedido, gbc);
+                btnClientes.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        // Ocultar la ventana principal actual
+                        setVisible(false);
+                        // Mostrar la ventana de clientes
+                        controlador.mostrarVentanaPedido();
+                    }
+                });
     }
 
     class BackgroundPanel extends JPanel {
