@@ -33,8 +33,6 @@ public class Controlador {
 
 	public Controlador() {
 
-		super();
-		
 	}
 
 	public Controlador(InsertJuegos insertjuegos, LoginView loginview, CompruebaAcceso compruebaacceso,

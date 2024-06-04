@@ -38,7 +38,8 @@ public class VentanaClientes extends JFrame {
         VentanaStock ventanastock = null;
         VentanaPedido ventanaPedido = null;
         modeloExport2 = new ExportClientes(); 
-        //controlador = new Controlador(insertjuegos, loginview, compruebaacceso, conexion, ventanaPrincipal, ventanastock, this, ventanaPedido, modeloExport, modeloExport2, modeloExport3);
+        controlador = new Controlador(insertjuegos, loginview, compruebaacceso, conexion, 
+        		ventanaPrincipal, ventanastock, this, ventanaPedido, modeloExport, modeloExport2, modeloExport3);
 
         // Configuración de la ventana y otros componentes
         setTitle("Clientes");
