@@ -87,7 +87,7 @@ public class VentanaprincipalApp extends JFrame {
                         // Ocultar la ventana principal actual
                         setVisible(false);
                         // Mostrar la ventana de clientes
-                        controlador.mostrarVentanaPedido();
+                        controlador.mostrarVentanaPedidos();
                     }
                 });
     }

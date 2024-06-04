@@ -1,8 +1,6 @@
 package controlador;
 
-import java.util.List;
-
-import javax.swing.SwingUtilities;
+import javax.swing.table.TableModel;
 
 import modelo.CompruebaAcceso;
 import modelo.Conexion;
@@ -15,7 +13,6 @@ import vista.VentanaClientes;
 import vista.VentanaPedido;
 import vista.VentanaStock;
 import vista.VentanaprincipalApp;
-import javax.swing.table.TableModel;
 
 public class Controlador {
 
