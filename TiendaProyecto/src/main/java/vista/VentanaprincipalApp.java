@@ -86,9 +86,9 @@ public class VentanaprincipalApp extends JFrame {
                 btnClientes.setBorderPainted(false); // Elimina el borde para que parezca un icono
                 btnClientes.setContentAreaFilled(false); // Elimina el relleno del botón
                 btnClientes.setFocusPainted(false); // Elimina el "focus" al hacer clic
-                gbc.gridx = 1; // Columna 1
+                gbc.gridx = 3; // Columna 3
                 gbc.gridy = 0; // Fila 0
-                gbc.insets = new Insets(120,5,5,5);
+                gbc.insets = new Insets(125,10,10,15);
                 contentPane.add(btnPedido, gbc);
                 btnClientes.addActionListener(new ActionListener() {
                     @Override
