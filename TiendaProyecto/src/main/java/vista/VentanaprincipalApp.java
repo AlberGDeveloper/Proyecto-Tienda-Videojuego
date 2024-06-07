@@ -1,10 +1,19 @@
 package vista;
 
-import java.awt.*;
+import java.awt.Graphics;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Image;
+import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.*;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
 import controlador.Controlador;
 
 public class VentanaprincipalApp extends JFrame {
@@ -72,14 +81,14 @@ public class VentanaprincipalApp extends JFrame {
 
                 // Botón Pedido con icono
                 JButton btnPedido = new JButton();
-                ImageIcon pedidoIcon = new ImageIcon(getClass().getResource("/images/icon_2.png"));
+                ImageIcon pedidoIcon = new ImageIcon(getClass().getResource("/images/exporticon.png"));
                 btnClientes.setIcon(pedidoIcon);
                 btnClientes.setBorderPainted(false); // Elimina el borde para que parezca un icono
                 btnClientes.setContentAreaFilled(false); // Elimina el relleno del botón
                 btnClientes.setFocusPainted(false); // Elimina el "focus" al hacer clic
                 gbc.gridx = 1; // Columna 1
                 gbc.gridy = 0; // Fila 0
-                gbc.insets = new Insets(125, 10, 10, 5);
+                gbc.insets = new Insets(120,5,5,5);
                 contentPane.add(btnPedido, gbc);
                 btnClientes.addActionListener(new ActionListener() {
                     @Override
